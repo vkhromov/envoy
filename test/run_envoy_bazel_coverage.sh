@@ -30,6 +30,7 @@ else
   BAZEL_BUILD_OPTIONS+=" --config=test-coverage --test_tag_filters=-nocoverage,-fuzz_target"
 fi
 
+echo bazel coverage ${BAZEL_BUILD_OPTIONS} ${COVERAGE_TARGETS}
 bazel coverage ${BAZEL_BUILD_OPTIONS} ${COVERAGE_TARGETS}
 
 # Collecting profile and testlogs
